@@ -8,8 +8,7 @@ In deze studie werd RNA-seq data afkomstig van synoviumbiopten van vier patiënt
 
 ## Methoden
 
-Voor deze studie werd gebruikgemaakt van publieke RNA-sequencingdata afkomstig van synoviumbiopten van vier vrouwelijke patiënten met gevestigde reumatoïde artritis (54–66 jaar) en vier vrouwelijke controlepersonen zonder RA (15–42 jaar). Alle RA-patiënten waren positief voor anti-citrullinated protein antibodies (ACPA). De dataset was afkomstig uit een eerder gepubliceerd onderzoek (Platzer et al., 2019).
-
+Voor deze studie werd gebruikgemaakt van publieke paired-end RNA-sequencingdata afkomstig van synoviumbiopten van vier vrouwelijke patiënten met gevestigde reumatoïde artritis (54–66 jaar) en vier vrouwelijke controlepersonen zonder RA (15–42 jaar).
 ![Figuur 1](Figuren/Figuur_workflow.png)
 
 <sub>**Figuur 1.** Overzicht van de uitgevoerde transcriptomics-analyse.</sub>
