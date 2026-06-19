@@ -10,7 +10,7 @@ In deze studie werd RNA-seq data afkomstig van synoviumbiopten van vier patiënt
 
 Voor deze studie werd gebruikgemaakt van publieke RNA-sequencingdata afkomstig van synoviumbiopten van vier vrouwelijke patiënten met gevestigde reumatoïde artritis (54–66 jaar) en vier vrouwelijke controlepersonen zonder RA (15–42 jaar). Alle RA-patiënten waren positief voor anti-citrullinated protein antibodies (ACPA). De dataset was afkomstig uit een eerder gepubliceerd onderzoek (Platzer et al., 2019).
 
-![Figuur 1](figures/Figuur1_Workflow.png)
+![Figuur 1](Figuren/Figuur_workflow.png)
 
 **Figuur 1.** Stroomschema van de uitgevoerde transcriptomics-analyse. RNA-seq reads werden gemapt tegen het humane referentiegenoom (GRCh38), waarna een count matrix werd gegenereerd. Vervolgens werd differentiële expressieanalyse uitgevoerd met DESeq2. Significante genen werden gebruikt voor Gene Ontology (GO)-analyse en visualisatie met een volcano plot. Tot slot werd een KEGG-pathwayanalyse uitgevoerd met Pathview, waarbij de B-cell receptor signaling pathway (hsa04662) werd onderzocht.
 
