@@ -12,7 +12,7 @@ Voor deze studie werd gebruikgemaakt van publieke RNA-sequencingdata afkomstig v
 
 ![Figuur 1](Figuren/Figuur_workflow.png)
 
-<sub>Figuur 1.** Stroomschema van de uitgevoerde transcriptomics-analyse. RNA-seq reads werden gemapt tegen het humane referentiegenoom (GRCh38), waarna een count matrix werd gegenereerd. Vervolgens werd differentiële expressieanalyse uitgevoerd met DESeq2. Significante genen werden gebruikt voor Gene Ontology (GO)-analyse en visualisatie met een volcano plot. Tot slot werd een KEGG-pathwayanalyse uitgevoerd met Pathview, waarbij de B-cell receptor signaling pathway (hsa04662) werd onderzocht</sub>
+<sub>**Figuur 1.** Overzicht van de uitgevoerde transcriptomics-analyse.</sub>
 
 Zoals weergegeven in **Figuur 1** werden de analyses uitgevoerd in R (versie 4.x). Eerst werd het humane referentiegenoom GRCh38 geïndexeerd met behulp van het package **Rsubread**. Vervolgens werden paired-end RNA-seq reads gemapt tegen het referentiegenoom met de functie `align()`. De resulterende BAM-bestanden werden gesorteerd en geïndexeerd met **Rsamtools**.
 
