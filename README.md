@@ -21,3 +21,23 @@ Voor het bepalen van genexpressie werd met `featureCounts()` een count matrix ge
 Differentiële genexpressie tussen de RA-groep en controlegroep werd bepaald met het package **DESeq2**. Hierbij werden de ruwe counts genormaliseerd en statistisch vergeleken. Genen met een aangepaste p-waarde (*padj*) kleiner dan 0,05 werden als significant beschouwd.
 
 Vervolgens werd met het package **goseq** een Gene Ontology (GO)-analyse uitgevoerd om verrijkte biologische processen te identificeren. De resultaten werden gevisualiseerd in een volcano plot en een GO-verrijkingsplot. Op basis van de GO-resultaten werd een KEGG-pathway geselecteerd voor verdere analyse. Hiervoor werd met het package **Pathview** de **B-cell receptor signaling pathway (hsa04662)** gevisualiseerd.
+
+## Resultaten
+
+De differentiële expressieanalyse resulteerde in een groot aantal genen met significante verschillen in expressie tussen RA-patiënten en controles. De resultaten werden gevisualiseerd met een volcano plot (Figuur 2). Hierin zijn genen weergegeven o.b.v. hun log2fold change en gecorrigeerde p-waarde. Zowel opgereguleerde als neer-gereguleerde genen werden waargenomen. Onder de sterkst veranderde genen bevonden zich meerdere immuungerelateerde genen, waaronder immunoglobuline-gerelateerde genen.
+
+![Figuur 2](Figuren/VolcanoplotRA.png)
+
+**Figuur 2.** Volcano plot van differentieel geëxpresseerde genen tussen RA-patiënten en controles. Rode punten representeren significant opgereguleerde genen, groene punten significant neer-gereguleerde genen en grijze punten niet-significante genen.
+
+De Gene Ontology-analyse liet zien dat verschillende immuungerelateerde processen significant verrijkt waren (Figuur 3). De meest verrijkte termen waren onder andere immunoglobulin complex, adaptive immune response, leukocyte activation, immune response en immune system process. Daarnaast werden ook algemene moleculaire functies zoals binding en protein binding geïdentificeerd.
+
+![Figuur 3](Figuren/GO.png)
+
+**Figuur 3.** Top 10 verrijkte GO-termen voor differentieel geëxpresseerde genen tussen RA-patiënten en controles. De grootte van de punten geeft het aantal differentieel geëxpresseerde genen weer, terwijl de kleur overeenkomt met de statistische significantie.
+
+O.b.v. deze resultaten werd de KEGG-pathway B cell receptor signaling pathway (hsa04662) verder onderzocht. Binnen deze pathway werden meerdere genen met veranderde expressie geïdentificeerd (Figuur 4). Zowel verhoogde als verlaagde expressie van componenten binnen de B-cel signaleringscascade werden waargenomen. Verschillende genen betrokken bij signaaltransductie en activatie van B-cellen vertoonden veranderingen in expressie tussen de onderzochte groepen.
+
+![Figuur 4](Figuren/hsa04662.pathview.png)
+
+**Figuur 4.** KEGG B-cell receptor signaling pathway (hsa04662) met differentiële genexpressie. Rode vakken geven relatief verhoogde expressie aan, terwijl groene vakken relatief verlaagde expressie aangeven in RA ten opzichte van controles.
