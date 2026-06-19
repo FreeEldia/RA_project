@@ -46,3 +46,13 @@ O.b.v. deze resultaten werd de KEGG-pathway B cell receptor signaling pathway (h
 In deze studie werd transcriptomics gebruikt om verschillen in genexpressie tussen synoviumweefsel van patiënten met reumatoïde artritis en controles te onderzoeken. De differentiële expressieanalyse identificeerde een groot aantal genen waarvan de expressie significant verschilde tussen beide groepen. De Gene Ontology-analyse liet zien dat vooral immuungerelateerde processen, waaronder adaptieve immuunrespons, immuunactivatie en immunoglobuline-gerelateerde functies, sterk vertegenwoordigd waren.
 De daaropvolgende KEGG-analyse van de B-cell receptor signaling pathway toonde aan dat meerdere genen binnen deze route veranderingen in expressie vertoonden. Deze bevinding sluit aan bij de bekende rol van B-cellen en autoantistofproductie in de pathogenese van reumatoïde artritis. De aanwezigheid van verrijkte immunologische processen en veranderingen binnen B-celgerelateerde signaleringsroutes ondersteunt het belang van adaptieve immuunmechanismen bij deze ziekte.
 Een beperking van deze studie is het relatief kleine aantal monsters en het gebruik van subsets van de oorspronkelijke sequencingdata. Toekomstig onderzoek zou gebruik kunnen maken van grotere datasets en aanvullende pathwayanalyses om de betrokken moleculaire mechanismen verder te karakteriseren. Desondanks tonen de resultaten aan dat transcriptomics een waardevolle methode is om biologische processen en genen te identificeren die betrokken zijn bij de ontwikkeling van reumatoïde artritis.
+
+## Referenties
+## AI disclaimer 
+Voor het maken van dit verslag is AI gebruikt voor het controleren van spelling en grammatica.
+Gabriel, S. E. (2001). The epidemiology of rheumatoid arthritis. Rheumatic Disease Clinics of North America, 27(2), 269–281. 
+Majithia, V., & Geraci, S. A. (2007). Rheumatoid arthritis: Diagnosis and management. The American Journal of Medicine, 120(11), 936–939. 
+McInnes, I. B., & Schett, G. (2011). The pathogenesis of rheumatoid arthritis. The Pathogenesis of Rheumatoid Arthritis. 
+Platzer, A. et al. (2019). Dataset source and synovial tissue transcriptomic analysis. 
+Radu, A. F., & Bungau, S. G. (2021). Management of rheumatoid arthritis: An overview. Cells, 10(11), 2857. 
+Smolen, J. S., Aletaha, D., & McInnes, I. B. (2016). Rheumatoid arthritis. The Lancet, 388(10055), 2023–2038.
