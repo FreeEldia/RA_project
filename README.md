@@ -13,7 +13,7 @@ Voor deze studie werd gebruikgemaakt van publieke paired-end RNA-sequencingdata 
 
 <sub>**Figuur 1.** Overzicht van de uitgevoerde transcriptomics-analyse.</sub>
 
-Zoals weergegeven in **Figuur 1** werden de analyses uitgevoerd in R (versie 4.x). Eerst werd het humane referentiegenoom GRCh38 geïndexeerd met behulp van het package **Rsubread**. Vervolgens werden paired-end RNA-seq reads gemapt tegen het referentiegenoom met de functie `align()`. De resulterende BAM-bestanden werden gesorteerd en geïndexeerd met **Rsamtools**.
+Zoals weergegeven in **Figuur 1** werden de analyses uitgevoerd in R (versie 4.5.2). Eerst werd het humane referentiegenoom GRCh38 (GCF_000001405.26) geïndexeerd met behulp van het package **Rsubread**. Vervolgens werden paired-end RNA-seq reads gemapt tegen het referentiegenoom met de functie `align()`. De resulterende BAM-bestanden werden gesorteerd en geïndexeerd met **Rsamtools**.
 
 Voor het bepalen van genexpressie werd met `featureCounts()` een count matrix gegenereerd op basis van een GTF-annotatiebestand afkomstig van dezelfde referentieversie als het gebruikte genoom. De count matrix bevatte gen-specifieke readaantallen voor alle acht samples.
 
