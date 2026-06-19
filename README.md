@@ -27,8 +27,9 @@ De differentiële expressieanalyse resulteerde in een groot aantal genen met sig
 
 ![Figuur 2](Figuren/VolcanoplotRA.png)
 
-**Figuur 2.** Volcano plot van differentieel geëxpresseerde genen tussen RA-patiënten en controles. Rode punten representeren significant opgereguleerde genen, groene punten significant neer-gereguleerde genen en grijze punten niet-significante genen.
+**Figuur 2**
 
+*Volcano plot van differentieel geëxpresseerde genen tussen RA-patiënten en controles.*
 De Gene Ontology-analyse liet zien dat verschillende immuungerelateerde processen significant verrijkt waren (Figuur 3). De meest verrijkte termen waren onder andere immunoglobulin complex, adaptive immune response, leukocyte activation, immune response en immune system process. Daarnaast werden ook algemene moleculaire functies zoals binding en protein binding geïdentificeerd.
 
 ![Figuur 3](Figuren/GO.png)
