@@ -15,7 +15,7 @@ Voor deze studie werd gebruikgemaakt van publieke paired-end RNA-sequencingdata 
 
 De analyse werd uitgevoerd in R (versie 4.5.2) volgens het stroomschema in Figuur 1. Reads werden met Rsubread (versie 2.24.0) gemapt tegen het humane referentiegenoom GRCh38 (GCF_000001405.26). De resulterende BAM-bestanden werden gesorteerd en geïndexeerd met Rsamtools (versie 2.26.0).
 
-Met featureCounts() werd een count matrix gegenereerd met het bijbehorende NCBI GTF-annotatiebestand. Differentiële genexpressie tussen RA en controles werd bepaald met DESeq2 (versie 1.50.2). Genen met een aangepaste p-waarde (padj) < 0,05 werden als significant beschouwd.
+Met featureCounts() werd een count matrix gegenereerd met het bijbehorende NCBI GTF-annotatiebestanden. De gebruikte SRA-runs waren SRR4785979, SRR4785980, SRR4785986 en SRR4785988 voor RA en SRR4785819, SRR4785820, SRR4785828 en SRR4785831 voor de controles. Differentiële genexpressie tussen RA en controles werd bepaald met DESeq2 (versie 1.50.2). Genen met een aangepaste p-waarde (padj) < 0,05 werden als significant beschouwd.
 
 Met goseq (versie 1.62.0) werd een Gene Ontology (GO)-analyse uitgevoerd. Op basis van de GO-resultaten werd de B-cell receptor signaling pathway (hsa04662) geselecteerd. Log2-fold changes werden met Pathview (versie 1.50.0) gekoppeld aan Entrez Gene-ID's en gevisualiseerd op de humane KEGG-pathway.
 
