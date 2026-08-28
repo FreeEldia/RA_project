@@ -13,21 +13,21 @@ Voor deze studie werd gebruikgemaakt van publieke paired-end RNA-sequencingdata 
 
 <sub>**Figuur 1.** Overzicht van de uitgevoerde transcriptomics-analyse.</sub>
 
-De analyse werd uitgevoerd in R (versie [4.5.2]) volgens het stroomschema in Figuur 1. Reads werden met Rsubread [2.24.0] gemapt tegen het humane referentiegenoom GRCh38 (GCF_000001405.26). De resulterende BAM-bestanden werden gesorteerd en geïndexeerd met Rsamtools [2.26.0].
+De analyse werd uitgevoerd in R (versie 4.5.2) volgens het stroomschema in Figuur 1. Reads werden met Rsubread (versie 2.24.0) gemapt tegen het humane referentiegenoom GRCh38 (GCF_000001405.26). De resulterende BAM-bestanden werden gesorteerd en geïndexeerd met Rsamtools (versie 2.26.0).
 
-Met featureCounts() werd een count matrix gegenereerd met het bijbehorende NCBI GTF-annotatiebestand. Differentiële genexpressie tussen RA en controles werd bepaald met DESeq2 [1.50.2]. Genen met een aangepaste p-waarde (padj) < 0,05 werden als significant beschouwd.
+Met featureCounts() werd een count matrix gegenereerd met het bijbehorende NCBI GTF-annotatiebestand. Differentiële genexpressie tussen RA en controles werd bepaald met DESeq2 (versie 1.50.2). Genen met een aangepaste p-waarde (padj) < 0,05 werden als significant beschouwd.
 
-Met goseq [1.62.0] werd een Gene Ontology (GO)-analyse uitgevoerd. Op basis van de GO-resultaten werd de B-cell receptor signaling pathway (hsa04662) geselecteerd. Log2-fold changes werden met Pathview [1.50.0] gekoppeld aan Entrez Gene-ID's en gevisualiseerd op de humane KEGG-pathway.
+Met goseq (versie 1.62.0) werd een Gene Ontology (GO)-analyse uitgevoerd. Op basis van de GO-resultaten werd de B-cell receptor signaling pathway (hsa04662) geselecteerd. Log2-fold changes werden met Pathview (versie 1.50.0) gekoppeld aan Entrez Gene-ID's en gevisualiseerd op de humane KEGG-pathway.
 
 
 ## Resultaten
 
-De differentiële expressieanalyse liet verschillen in genexpressie zien tussen RA-patiënten en controles. In totaal waren **[5119] genen significant differentieel geëxpresseerd** (*padj* < 0,05). Hiervan waren **[2487] genen opgereguleerd** en **[2084] genen neergereguleerd**. De verdeling van de differentiële genexpressie is weergegeven in **Figuur 2**. Onder de opvallende genen bevonden zich onder andere *BCL2A1*, *ADAMDEC1* en meerdere immunoglobuline-gerelateerde genen, waaronder *IGHV3-53*, *IGHV1-69*, *IGHG4*, *IGHV4-31* en *IGKV2-28*.
+De differentiële expressieanalyse liet verschillen in genexpressie zien tussen RA-patiënten en controles. In totaal waren **5119 genen significant differentieel geëxpresseerd** (*padj* < 0,05). Hiervan waren **2487 genen opgereguleerd** en **2084 genen neergereguleerd**. De verdeling van de differentiële genexpressie is weergegeven in **Figuur 2**. Onder de opvallende genen bevonden zich onder andere *BCL2A1*, *ADAMDEC1* en meerdere immunoglobuline-gerelateerde genen, waaronder *IGHV3-53*, *IGHV1-69*, *IGHG4*, *IGHV4-31* en *IGKV2-28*.
 
 ![Figuur 2](Figuren/VolcanoplotRA.png)
 
 
-<sub>**Figuur 2.** Volcano plot van differentieel geëxpresseerde genen tussen RA-patiënten en controles. De x-as geeft de log2 fold change weer en de y-as de statistische significantie. Rode punten representeren significant opgereguleerde genen, groene punten significant neergereguleerde genen en grijze punten niet-significante genen. </sub>
+<sub>**Figuur 2.** Volcano plot van genexpressieverschillen tussen RA-patiënten en controles. De x-as geeft de log2 fold change weer en de y-as de −log10 p-waarde. Grijze punten voldoen niet aan de significantiecriteria, groene punten voldoen aan het log2-fold-changecriterium en rode punten voldoen zowel aan het p-waarde- als het log2-fold-changecriterium.. </sub>
 
 De Gene Ontology-analyse liet zien dat verschillende immuungerelateerde processen significant verrijkt waren (Figuur 3). De meest verrijkte termen waren onder andere immunoglobulin complex, adaptive immune response, leukocyte activation, immune response en immune system process. Vooral de aanwezigheid van *immunoglobulin complex* en *adaptive immune response* wijst erop dat een relatief groot aantal differentieel geëxpresseerde genen betrokken is bij de adaptieve immuunrespons.
 
