@@ -10,6 +10,12 @@ buildindex(
   reference = 'GCF_000001405.26_GRCh38_genomic.fna',
   memory = 4000,
   indexSplit = TRUE)
+packageVersion("Rsubread")
+packageVersion("Rsamtools")
+packageVersion("DESeq2")
+packageVersion("goseq")
+packageVersion("pathview")
+R.version.string
 #mapping
 align.RA1 <- align(
   index = "RA_project",
@@ -133,6 +139,21 @@ sum(resultaten$padj < 0.05 & resultaten$log2FoldChange < -1, na.rm = TRUE)
 hoogste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = TRUE), ]
 laagste_fold_change <- resultaten[order(resultaten$log2FoldChange, decreasing = FALSE), ]
 laagste_p_waarde <- resultaten[order(resultaten$padj, decreasing = FALSE), ]
+# Totaal significant
+sum(resultaten$padj < 0.05, na.rm = TRUE)
+
+# Opgereguleerd
+sum(resultaten$padj < 0.05 &
+      resultaten$log2FoldChange > 1,
+    na.rm = TRUE)
+
+# Neergereguleerd
+sum(resultaten$padj < 0.05 &
+      resultaten$log2FoldChange < -1,
+    na.rm = TRUE)
+
+
+
 EnhancedVolcano(resultaten,
                 lab = rownames(resultaten),
                 x = 'log2FoldChange',
@@ -198,3 +219,4 @@ pathview(
   gene.idtype = "ENTREZID",
   limit = list(gene = 5)
   )
+
