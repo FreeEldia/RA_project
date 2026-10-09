@@ -74,14 +74,38 @@ GitHub werd gebruikt voor versiebeheer en documentatie van de transcriptomics-an
 Voor het maken van dit verslag is AI gebruikt voor het controleren van spelling en grammatica.
 
 
-Gabriel, S. E. (2001). The epidemiology of rheumatoid arthritis. Rheumatic Disease Clinics of North America, 27(2), 269–281. 
+### Databronnen
 
-Majithia, V., & Geraci, S. A. (2007). Rheumatoid arthritis: Diagnosis and management. The American Journal of Medicine, 120(11), 936–939. 
+- NCBI Gene Expression Omnibus. *RNAseq study of synovial biopsies*. GEO Series GSE89408. https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE89408
 
-McInnes, I. B., & Schett, G. (2011). The pathogenesis of rheumatoid arthritis. The Pathogenesis of Rheumatoid Arthritis. 
+- Guo, Y., et al. (2017). CD40L-Dependent Pathway Is Active at Various Stages of Rheumatoid Arthritis Disease Progression. *The Journal of Immunology, 198*(11), 4490–4501. https://doi.org/10.4049/jimmunol.1601988
 
-Platzer, A. et al. (2019). Dataset source and synovial tissue transcriptomic analysis. 
+- NCBI. *Homo sapiens genome assembly GRCh38.p14*, GCF_000001405.40. https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/
 
-Radu, A. F., & Bungau, S. G. (2021). Management of rheumatoid arthritis: An overview. Cells, 10(11), 2857. 
+- NCBI. *Homo sapiens reference genome GRCh38*, GCF_000001405.26. https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.26/
 
-Smolen, J. S., Aletaha, D., & McInnes, I. B. (2016). Rheumatoid arthritis. The Lancet, 388(10055), 2023–2038.
+### R en softwarepackages
+
+- R Core Team. *R: A Language and Environment for Statistical Computing*. R Foundation for Statistical Computing. https://www.r-project.org/
+
+- Liao, Y., Smyth, G. K., & Shi, W. (2019). The R package Rsubread is easier, faster, cheaper and better for alignment and quantification of RNA sequencing reads. *Nucleic Acids Research, 47*(8), e47. https://doi.org/10.1093/nar/gkz114
+
+- Rsamtools. *Bioconductor package*. https://doi.org/10.18129/B9.bioc.Rsamtools
+
+- Love, M. I., Huber, W., & Anders, S. (2014). Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. *Genome Biology, 15*, 550. https://doi.org/10.1186/s13059-014-0550-8
+
+- EnhancedVolcano. *Bioconductor package*. https://doi.org/10.18129/B9.bioc.EnhancedVolcano
+
+- Young, M. D., Wakefield, M. J., Smyth, G. K., & Oshlack, A. (2010). Gene ontology analysis for RNA-seq: accounting for selection bias. *Genome Biology, 11*, R14. https://doi.org/10.1186/gb-2010-11-2-r14
+
+- goseq. *Bioconductor package*. https://doi.org/10.18129/B9.bioc.goseq
+
+- Wickham, H. (2016). *ggplot2: Elegant Graphics for Data Analysis*. Springer. https://ggplot2.tidyverse.org/
+
+- dplyr. *R package for data manipulation*. https://dplyr.tidyverse.org/
+
+- AnnotationDbi. *Bioconductor package*. https://doi.org/10.18129/B9.bioc.AnnotationDbi
+
+- org.Hs.eg.db. *Bioconductor human gene annotation database*. https://doi.org/10.18129/B9.bioc.org.Hs.eg.db
+
+- Luo, W., & Brouwer, C. (2013). Pathview: An R/Bioconductor package for pathway-based data integration and visualization. *Bioinformatics, 29*(14), 1830–1831. https://doi.org/10.1093/bioinformatics/btt285
