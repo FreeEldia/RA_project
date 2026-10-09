@@ -195,15 +195,17 @@ De visualisatie laat zien dat meerdere genen binnen de B-cel-signaleringsroute v
 
 
 
-
-
 ## Conclusie
 
-In deze studie werd transcriptomics gebruikt om verschillen in genexpressie tussen synoviumweefsel van patiënten met reumatoïde artritis en controles te onderzoeken. De differentiële expressieanalyse identificeerde een groot aantal genen waarvan de expressie significant verschilde tussen beide groepen. De Gene Ontology-analyse liet zien dat vooral immuungerelateerde processen, waaronder adaptieve immuunrespons, immuunactivatie en immunoglobuline-gerelateerde functies, sterk vertegenwoordigd waren.
-De daaropvolgende KEGG-analyse van de B-cell receptor signaling pathway toonde aan dat meerdere genen binnen deze route veranderingen in expressie vertoonden. Deze bevinding sluit aan bij de bekende rol van B-cellen en autoantistofproductie in de pathogenese van reumatoïde artritis. De aanwezigheid van verrijkte immunologische processen en veranderingen binnen B-celgerelateerde signaleringsroutes ondersteunt het belang van adaptieve immuunmechanismen bij deze ziekte.
-Een beperking van deze studie is het relatief kleine aantal monsters en het gebruik van subsets van de oorspronkelijke sequencingdata. Toekomstig onderzoek zou gebruik kunnen maken van grotere datasets en aanvullende pathwayanalyses om de betrokken moleculaire mechanismen verder te karakteriseren. Desondanks tonen de resultaten aan dat transcriptomics een waardevolle methode is om biologische processen en genen te identificeren die betrokken zijn bij de ontwikkeling van reumatoïde artritis.
+De transcriptomics-analyse identificeerde 5.119 significant differentieel geëxpresseerde genen tussen synoviumweefsel van patiënten met reumatoïde artritis (RA) en gezonde controles. Hiervan waren 2.085 genen hoger en 2.487 genen lager tot expressie gebracht bij RA, bij een aanvullende grens van |log2FC| > 1.
+De GO-analyse identificeerde 88 significant verrijkte GO-termen, waaronder adaptive immune response, immunoglobulin complex en B cell mediated immunity. Ook vertoonden verschillende immunoglobuline-gerelateerde genen een verhoogde expressie bij RA. Deze bevindingen ondersteunen de betrokkenheid van adaptieve immuunprocessen en B-celgerelateerde functies bij RA. De KEGG-visualisatie van de B-cell receptor signaling pathway sloot hierbij aan, maar bewijst geen activering van de volledige pathway.
+Door de kleine steekproefomvang en beperkingen in de oorspronkelijke gegevensverwerking moeten de resultaten voorzichtig worden geïnterpreteerd. Vervolgonderzoek met grotere patiëntengroepen is nodig om deze bevindingen te bevestigen.
+
 ## Databeheer
-GitHub werd gebruikt voor versiebeheer en documentatie van de transcriptomics-analyse. Het gebruikte R-script is in de repository opgeslagen en per analysestap voorzien van commentaar, zodat zichtbaar is hoe de ruwe RNA-seq-data zijn verwerkt tot de uiteindelijke resultaten. Figuren en overige outputbestanden zijn in afzonderlijke mappen opgeslagen. Wijzigingen aan bestanden werden met Git-commits vastgelegd, waardoor eerdere versies behouden blijven en aanpassingen aan de analyse traceerbaar zijn. Grote ruwe sequencingbestanden zijn vanwege hun bestandsgrootte niet in de repository opgenomen; de gebruikte dataset en referentiebestanden zijn daarom beschreven met hun oorspronkelijke bron en accessienummers. Deze structuur maakt de analyse transparanter en maakt het mogelijk om de uitgevoerde stappen met dezelfde inputbestanden en software opnieuw uit te voeren
+
+Voor dit transcriptomicsproject werd GitHub gebruikt voor het versiebeheer en de documentatie van scripts en resultaten. De repository is zo georganiseerd dat de verschillende stappen van de RNA-seq-analyse terug te vinden zijn.
+De map Script bevat het R-script met de uitgevoerde analyses, waaronder DESeq2, GO-verrijking en KEGG-pathwayvisualisatie. In de map Figuren staan de bijbehorende resultaten, zoals de volcano plot, GO-dotplot en Pathview-figuur. Het bestand README.md beschrijft de achtergrond, methoden, resultaten en conclusie van het onderzoek.
+Bij het databeheer werd rekening gehouden met de FAIR-principes: de data zijn vindbaar via NCBI, toegankelijk via openbare databanken en uitwisselbaar dankzij gangbare bestandsformaten. Het documenteren van de gebruikte software, analyseparameters en bestanden ondersteunt de herbruikbaarheid en reproduceerbaarheid.
 
 ## Referenties
 ## AI disclaimer 
