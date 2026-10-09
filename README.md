@@ -173,7 +173,7 @@ Daarnaast werden onder andere *antigen binding* (padj = 4,08 × 10⁻¹³), *imm
 
 Om de belangrijkste GO-resultaten onderling te vergelijken, werden de tien sterkst verrijkte GO-termen weergegeven in een dotplot (**Figuur 3**).
 
-![Figuur 3](GO_plot_RA.png)
+![Figuur 3](Figuren/GO_plot_RA.png)
 
 <sub>**Figuur 3.** Dotplot van de tien sterkst verrijkte GO-termen onder de differentieel geëxpresseerde genen. De horizontale as geeft het percentage differentieel geëxpresseerde genen binnen een GO-term weer. De puntgrootte vertegenwoordigt het aantal differentieel geëxpresseerde genen per GO-term en de kleur geeft de Benjamini-Hochberg-gecorrigeerde p-waarde weer.</sub>
 
