@@ -73,7 +73,7 @@ flowchart TD
     G --> V
 ```
 
-**Figuur 1.** Schematisch overzicht van de transcriptomics-workflow, bestaande uit readmapping, genkwantificatie, differentiële genexpressieanalyse, GO-verrijkingsanalyse en KEGG-pathwayvisualisatie. Het schema toont de algemene verwerkingsstappen; voor de uiteindelijke statistische analyse werd de afzonderlijke count matrix `count_matrix_RA.txt` gebruikt.
+**Figuur 1.** Schematisch overzicht van de transcriptomics-workflow, bestaande uit readmapping, genkwantificatie, differentiële genexpressieanalyse, GO-verrijkingsanalyse en KEGG-pathwayvisualisatie. Het schema toont de algemene verwerkingsstappen
 
 ### RNA-seq-verwerking en genkwantificatie
 
