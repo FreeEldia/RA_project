@@ -207,7 +207,7 @@ Door de kleine steekproefomvang en beperkingen in de oorspronkelijke gegevensver
 Voor dit transcriptomicsproject werd GitHub gebruikt voor het versiebeheer en de documentatie van scripts en resultaten. De repository is zo georganiseerd dat de verschillende stappen van de RNA-seq-analyse terug te vinden zijn.
 De map Script bevat het R-script met de uitgevoerde analyses, waaronder DESeq2, GO-verrijking en KEGG-pathwayvisualisatie. In de map Figuren staan de bijbehorende resultaten, zoals de volcano plot, GO-dotplot en Pathview-figuur. Het bestand README.md beschrijft de achtergrond, methoden, resultaten en conclusie van het onderzoek.
 Bij het databeheer werd rekening gehouden met de FAIR-principes: de data zijn vindbaar via NCBI, toegankelijk via openbare databanken en uitwisselbaar dankzij gangbare bestandsformaten. Het documenteren van de gebruikte software, analyseparameters en bestanden ondersteunt de herbruikbaarheid en reproduceerbaarheid.
-
+De map `Data` bevat de databestanden die nodig zijn voor de analyse, waaronder de count matrix en de sample-informatie.
 ## Referenties
 ## AI disclaimer 
 Voor het maken van dit verslag is AI gebruikt voor het controleren van spelling, grammatica en ondersteuning bij programmeervragen
