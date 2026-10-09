@@ -71,7 +71,7 @@ GitHub werd gebruikt voor versiebeheer en documentatie van de transcriptomics-an
 
 ## Referenties
 ## AI disclaimer 
-Voor het maken van dit verslag is AI gebruikt voor het controleren van spelling en grammatica.
+Voor het maken van dit verslag is AI gebruikt voor het controleren van spelling, grammatica en ondersteuning bij programmeervragen
 
 
 ### Databronnen
