@@ -5,6 +5,7 @@ install.packages('BiocManager')
 BiocManager::install('Rsubread')
 library(Rsubread)
 browseVignettes('Rsubread')
+# referentiegenoom indexeren
 buildindex(
   basename = 'RA_project',
   reference = 'GCF_000001405.26_GRCh38_genomic.fna',
@@ -16,7 +17,8 @@ packageVersion("DESeq2")
 packageVersion("goseq")
 packageVersion("pathview")
 R.version.string
-#mapping
+#paired-end reads mappen met Rsubread
+
 align.RA1 <- align(
   index = "RA_project",
   readfile1 = "SRR4785979_1_subset40k.fastq",
