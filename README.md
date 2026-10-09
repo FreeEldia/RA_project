@@ -6,6 +6,7 @@
 In deze repository zijn het R-script, de figuren en het verslag van de transcriptomics-analyse van reumatoïde artritis (RA) opgenomen.
 
 - [Script](Script/) – R-script voor de verwerking en analyse van RNA-seq-data.
+- [Data](Data/) – de gebruikte data voor dit analyse
 - [Figuren](Figuren/) – Workflow, volcano plot, GO-grafiek en KEGG-visualisatie.
 - [README.md](README.md) – Verslag van het onderzoek.
 
