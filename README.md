@@ -95,7 +95,7 @@ Hierbij werd het NCBI RefSeq-annotatiebestand **`genomic.gtf`** gebruikt. De met
 
 De bijbehorende annotatie is te vinden via [NCBI Genome Assembly GCF_000001405.40](https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/).
 
-De verwerking van de FASTQ-subsets resulteerde in een count matrix. Voor de daaropvolgende differentiële genexpressieanalyse werd **`count_matrix_RA.txt`** gebruikt, met tellingen voor **29.407 genen en acht samples**. Dit was een afzonderlijke count matrix; de precieze voorafgaande verwerking van dit bestand kon niet volledig worden vastgesteld.
+De verwerking van de FASTQ-subsets resulteerde in een count matrix. Voor de daaropvolgende differentiële genexpressieanalyse werd **`count_matrix_RA.txt`** gebruikt, met tellingen voor **29.407 genen en acht samples**.
 
 ### Differentiële genexpressieanalyse
 
@@ -145,26 +145,57 @@ De Pathview-figuur werd gebruikt om de richting en grootte van genexpressieversc
 
 Het gebruikte R-script is beschikbaar in de [Script-map van de GitHub-repository](https://github.com/FreeEldia/RA_project/tree/main/Script).
 ## Resultaten
+### Differentiële genexpressie tussen RA en gezonde controles
 
-De differentiële expressieanalyse liet verschillen in genexpressie zien tussen RA-patiënten en controles. In totaal waren 5119 genen significant differentieel geëxpresseerd (padj < 0,05). Daarvan hadden 2487 genen een log2FC > 1 en 2084 genen een log2FC < -1. Hiervan waren **2487 genen opgereguleerd** en **2084 genen neergereguleerd**. De verdeling van de differentiële genexpressie is weergegeven in **Figuur 2**. Onder de opvallende genen bevonden zich onder andere *BCL2A1*, *ADAMDEC1* en meerdere immunoglobuline-gerelateerde genen, waaronder *IGHV3-53*, *IGHV1-69*, *IGHG4*, *IGHV4-31* en *IGKV2-28*.
+Om vast te stellen welke genen verschillen in expressie tussen synoviumweefsel van patiënten met reumatoïde artritis (RA) en gezonde controles, werd een differentiële genexpressieanalyse uitgevoerd met DESeq2.
+
+In totaal werden **5.119 significant differentieel geëxpresseerde genen** geïdentificeerd (`padj < 0,05`). Hiervan vertoonden **2.085 genen een hogere expressie bij RA** (`log2FoldChange > 1`) en **2.487 genen een lagere expressie bij RA** (`log2FoldChange < -1`). De overige 547 significante genen voldeden niet aan deze aanvullende fold-changegrenzen.
+
+Onder de sterk opgereguleerde genen bevonden zich *BCL2A1* (log2FC = 6,71; padj = 6,75 × 10⁻¹⁸) en *ADAMDEC1* (log2FC = 8,65; padj = 6,83 × 10⁻¹¹).
+
+Daarnaast vertoonden verschillende immunoglobuline-gerelateerde genen een significant hogere expressie bij RA, waaronder *IGHV3-53* (log2FC = 11,43), *IGHV1-69* (log2FC = 10,44), *IGHG4* (log2FC = 7,35), *IGHV4-31* (log2FC = 10,01) en *IGKV2-28* (log2FC = 10,04). Al deze genen hadden een aangepaste p-waarde kleiner dan 0,05.
+
+Om de richting en statistische significantie van de genexpressieverschillen zichtbaar te maken, werden de resultaten weergegeven in een volcano plot (**Figuur 2**). Hierbij staan genen met een hogere expressie bij RA rechts van nul en genen met een lagere expressie bij RA links van nul.
 
 ![Figuur 2](Figuren/VolcanoplotRA.png)
 
+<sub>**Figuur 2.** Volcano plot van differentiële genexpressie tussen RA-patiënten en gezonde controles. De x-as toont de log2-fold change (RA ten opzichte van controle) en de y-as de −log10 van de aangepaste p-waarde (`padj`). Rode punten voldoen aan zowel de significantiegrens (`padj < 0,05`) als de fold-changegrens (`|log2FC| > 1`). Groene punten voldoen alleen aan het fold-changecriterium; grijze punten voldoen aan geen van beide criteria. De genen *BCL2A1*, *ADAMDEC1*, *IGHV3-53* en *IGHV1-69* zijn ter illustratie gelabeld.</sub>
 
-<sub>**Figuur 2.** Volcano plot van genexpressieverschillen tussen RA-patiënten en controles. De x-as geeft de log2 fold change weer en de y-as de −log10 p-waarde. Grijze punten voldoen niet aan de significantiecriteria, groene punten voldoen aan het log2-fold-changecriterium en rode punten voldoen zowel aan het p-waarde- als het log2-fold-changecriterium.. </sub>
+### Gene Ontology-verrijkingsanalyse
 
-De Gene Ontology-analyse liet zien dat verschillende immuungerelateerde processen significant verrijkt waren (Figuur 3). De meest verrijkte termen waren onder andere immunoglobulin complex, adaptive immune response, leukocyte activation, immune response en immune system process. Vooral de aanwezigheid van *immunoglobulin complex* en *adaptive immune response* wijst erop dat een relatief groot aantal differentieel geëxpresseerde genen betrokken is bij de adaptieve immuunrespons.
+Om te onderzoeken welke biologische processen, moleculaire functies en cellulaire componenten oververtegenwoordigd waren onder de differentieel geëxpresseerde genen, werd een Gene Ontology (GO)-verrijkingsanalyse uitgevoerd met goseq.
+
+Na correctie voor multiple testing met de Benjamini-Hochberg-methode werden **88 significant oververtegenwoordigde GO-termen** geïdentificeerd (`padj < 0,05`).
+
+De sterkst verrijkte GO-termen waren *immunoglobulin complex* (padj = 3,38 × 10⁻²⁶), *adaptive immune response* (padj = 9,56 × 10⁻²⁰) en *immune response* (padj = 2,58 × 10⁻¹³).
+
+Daarnaast werden onder andere *antigen binding* (padj = 4,08 × 10⁻¹³), *immune system process* (padj = 8,13 × 10⁻¹²), *B cell mediated immunity* (padj = 2,39 × 10⁻⁷), *leukocyte activation* (padj = 3,57 × 10⁻⁷) en *immunoglobulin mediated immune response* (padj = 3,90 × 10⁻⁷) als significant oververtegenwoordigd geïdentificeerd.
+
+Om de belangrijkste GO-resultaten onderling te vergelijken, werden de tien sterkst verrijkte GO-termen weergegeven in een dotplot (**Figuur 3**).
 
 ![Figuur 3](Figuren/GO.png)
 
-<sub>**Figuur 3**. Top 10 verrijkte GO-termen van de differentieel geëxpresseerde genen. De grootte van de punten geeft het aantal differentieel geëxpresseerde genen per GO-term weer. De kleur geeft de statistische significantie van de verrijking weer.</sub>
+<sub>**Figuur 3.** Dotplot van de tien sterkst verrijkte GO-termen onder de differentieel geëxpresseerde genen. De horizontale as geeft het percentage differentieel geëxpresseerde genen binnen een GO-term weer. De puntgrootte vertegenwoordigt het aantal differentieel geëxpresseerde genen per GO-term en de kleur geeft de Benjamini-Hochberg-gecorrigeerde p-waarde weer.</sub>
 
+De oververtegenwoordiging van *immunoglobulin complex*, *adaptive immune response* en *B cell mediated immunity* laat zien dat immuungerelateerde en B-celgerelateerde functies sterk vertegenwoordigd zijn onder de genen waarvan de expressie verschilt tussen RA-patiënten en gezonde controles.
 
-Op basis van de verrijking van immuungerelateerde GO-termen werd de **B-cell receptor signaling pathway (hsa04662)** onderzocht. In deze KEGG-pathway werden zowel positieve als negatieve veranderingen in genexpressie waargenomen (**Figuur 4**). Verschillende componenten van de B-cel-signaleringsroute vertoonden veranderde expressie. In combinatie met de immunoglobuline-gerelateerde genen en GO-termen laat dit zien dat genen betrokken bij B-celfunctie verschillen in expressie tussen het RA- en controleweefsel.
+### KEGG-pathwayvisualisatie van B-celsignalering
+
+Om de gevonden immuungerelateerde expressieverschillen verder te onderzoeken binnen een bekende biologische signaalroute, werd de humane **B-cell receptor signaling pathway (hsa04662)** geselecteerd voor visualisatie met Pathview.
+
+Deze pathway werd gekozen vanwege de significante verrijking van GO-termen die samenhangen met de adaptieve immuunrespons, immunoglobulinen en B-celgerelateerde functies.
+
+De log2-fold changes uit de DESeq2-analyse werden gekoppeld aan de genen binnen deze KEGG-pathway en weergegeven in **Figuur 4**. Hierbij waren zowel positieve als negatieve veranderingen in genexpressie zichtbaar.
 
 ![Figuur 4](Figuren/hsa04662.pathview.png)
 
-<sub>**Figuur 4**. KEGG B-cell receptor signaling pathway (hsa04662) met genexpressieveranderingen van RA ten opzichte van controles. Rode vakken geven een positieve log2 fold change aan en groene vakken een negatieve log2 fold change.</sub>
+<sub>**Figuur 4.** KEGG B-cell receptor signaling pathway (hsa04662), gevisualiseerd met Pathview. De kleuren geven de log2-fold changes weer voor RA ten opzichte van gezonde controles. Rode vakken vertegenwoordigen positieve log2-fold changes (hogere expressie bij RA) en groene vakken negatieve log2-fold changes (lagere expressie bij RA), volgens de gebruikte Pathview-kleurschaal.</sub>
+
+De visualisatie laat zien dat meerdere genen binnen de B-cel-signaleringsroute verschillen in expressie tussen RA- en controleweefsel. Dit sluit aan bij de GO-resultaten en de verhoogde expressie van verschillende immunoglobuline-gerelateerde genen.
+
+
+
+
 
 ## Conclusie
 
